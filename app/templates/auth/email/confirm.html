@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认邮件</title>
+</head>
+<body>
+<p>亲爱的 {{ user.username }}</p>
+<p>欢迎来到<b>R-Blog</b>!</p>
+<p><a href="{{ url_for('auth.confirm', token=token, _external=True) }}"><h3>激活您的账号</h3></a></p>
+<p>此外,您还可以复制以下链接到浏览器中激活</p>
+<p>{{ url_for('auth.confirm', token=token, _external=True) }}</p>
+<p>非常感谢,</p>
+<p>R-Blog 致上</p>
+<p><small>提示: 回复此邮件无效.</small></p>
+</body>
+</html>

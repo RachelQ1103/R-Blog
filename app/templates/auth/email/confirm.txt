@@ -1,0 +1,13 @@
+亲爱的 {{ user.username }}
+
+欢迎来到R-Blog!
+
+点击以下链接, 激活您的账号:
+
+{{ url_for('auth.confirm', token=token, _external=True) }}
+
+非常感谢,
+
+R-Blog 致上
+
+提示: 回复此邮件无效.

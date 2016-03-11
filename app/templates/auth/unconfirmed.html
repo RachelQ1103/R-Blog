@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}R-Blog - 确认你的账户{%  endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>
+        您好, {{ current_user.username }}!
+    </h1>
+    <h3>您的账号还未激活.</h3>
+    <p>
+        需要您先激活才能浏览这个网页.
+        请检查您的收件箱,查收激活邮件.
+    </p>
+    <p>
+        需要重新发送确认邮件?
+        <a href="{{ url_for('auth.resend_confirmation') }}">再次激活</a>
+    </p>
+</div>
+{% endblock %}
